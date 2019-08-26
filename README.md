@@ -1,9 +1,10 @@
-# Sincrum - Guia de estilo para el desarrollo en GeneXus
-por [Daniel Monza](https://uy.linkedin.com/in/daniel-monza-62515112)
+# Guia de estilo para el desarrollo en GeneXus
+Por [Alexis Boni](https://ar.linkedin.com/in/alexis-boni-841879177)
+
+Esta guía es una adaptación de la excelente guía desarrollada por [Daniel Monza](https://uy.linkedin.com/in/daniel-monza-62515112):  
+[Sincrum - Guia de estilo para el desarrollo en GeneXus](https://github.com/sincrum/genexus)
 
 [![Licencia Creative Commons](https://i.creativecommons.org/l/by-sa/4.0/80x15.png)](http://creativecommons.org/licenses/by-sa/4.0/)
-
-Por correcciones o mejoras, pueden utilizar los [issues de github](https://github.com/sincrum/genexus/issues) o enviarlas por email a [info@sincrum.com](mailto:info@sincrum.com).
 
 ## Objetivos
 La presente guía se realizó buscando los siguientes objetivos:
@@ -11,6 +12,8 @@ La presente guía se realizó buscando los siguientes objetivos:
   1. Transmitir las mejores prácticas a la hora de desarrollar en GeneXus.
   1. Estandarizar el código escrito. Ya que hay tantas formas de programar como programadores, se intenta simplificar la lectura del código fuente.
   1. Divulgar buenas prácticas de codificación y las novedades del lenguaje.
+
+A Diferencia de la versión original de [Daniel Monza](https://uy.linkedin.com/in/daniel-monza-62515112), esta guía se basa exclusivamente en la versión en español y solo soporta este idioma. 
 
 ## Tabla de Contenidos
 
@@ -103,7 +106,8 @@ La presente guía se realizó buscando los siguientes objetivos:
 	```
 
   <a name="naming-gik"></a><a name="1.6"></a>
-  - [1.6](#naming-gik) Utilizar [nomenclatura GIK](http://wiki.genexus.com/commwiki/servlet/wiki?1872,GIK) para nombrar atributos. Se pueden crear atributos sin el límite de los 3 caracteres si el nombre no supera los 20 caracteres y mejora la comprensión.
+  
+  - [1.6](#naming-gik) Se pueden crear atributos sin el límite de los 3 caracteres si el nombre no supera los 20 caracteres y mejora la comprensión. Solo utilizar [nomenclatura GIK](http://wiki.genexus.com/commwiki/servlet/wiki?1872,GIK) para nombrar atributos como último recurso.
 	> Estandard desde los inicios de GeneXus.
 
     ```javascript
@@ -111,10 +115,10 @@ La presente guía se realizó buscando los siguientes objetivos:
     CreCliFch
     FechaCreadoCliente
 
-    // bien
+    // ultimo recurso
     CliFchCre
 
-    // mejor
+    // bien
     ClienteFechaCreado
 	```
 
@@ -219,7 +223,7 @@ La presente guía se realizó buscando los siguientes objetivos:
 	```
 
   <a name="whitespace-parms"></a><a name="2.4"></a>
-  - [2.4](#whitespace-parms) Dejar un espacio antes de cada parámetro.
+  - [2.4](#whitespace-parms) Dejar un espacio antes de cada parámetro **excepto** el primero
 
 	> Hace a la sentencia más sencilla de leer.
 
@@ -227,14 +231,20 @@ La presente guía se realizó buscando los siguientes objetivos:
     // mal
     parm(in:PaiId,out:&PaiNom);
 
-    // bien
+    // mal
     parm( in:PaiId, out:&PaiNom);
+
+    // bien
+    parm(in:PaiId, out:&PaiNom);
 
     // mal
     &Fecha = ymdtod(2017,01,01)
+   
+    // mal
+    &Fecha = ymdtod( 2017, 01, 01)
 
     // bien
-    &Fecha = ymdtod( 2017, 01, 01)
+    &Fecha = ymdtod(2017, 01, 01)
     ```
 
 **[Volver al inicio](#tabla-de-contenidos)**
@@ -761,22 +771,19 @@ La presente guía se realizó buscando los siguientes objetivos:
 
 **[Volver al inicio](#tabla-de-contenidos)**
 
-## Traducciones
-Esta guia de estilo se encuentra también en los siguientes lenguajes:
+## Colaboradores Originales
 
-  - ![us](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/United-States.png) [**English**](README_en.md) by [Laura Aguiar](https://uy.linkedin.com/in/laura-aguiar-396aa56)
-
-**[Volver al inicio](#tabla-de-contenidos)**
+  - [Daniel Monza](https://uy.linkedin.com/in/daniel-monza-62515112)
+  - [Laura Aguiar](https://uy.linkedin.com/in/laura-aguiar-396aa56)
 
 ## Licencia
-[![Licencia Creative Commons](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/)
+
 
 Esta obra está bajo una Licencia [Creative Commons Atribución-CompartirIgual 4.0 Internacional](http://creativecommons.org/licenses/by-sa/4.0/)
 
+
+Basado en la excelente guía de [Daniel Monza](https://uy.linkedin.com/in/daniel-monza-62515112): [Sincrum - Guia de estilo para el desarrollo en GeneXus](https://github.com/sincrum/genexus)
+
 Basado en [la guia de Javascript de AirBNB](http://airbnb.io/javascript/)
 
-**[Volver al inicio](#tabla-de-contenidos)**
-
-## Modificaciones al documento
-
-Recomendamos que ralice un fork de está guía, realice modificaciones y/o cambie las reglas para que se adecuén a su equipo de trabajo ó empresa. A continuación puede agregar modificaciones a la guía de estilos. Esto le permite actualizar periódicamente el docuemnto sin lidiar con problemas de merge.
+**[Back to Top](#table-of-contents)**
